@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 
 app = Flask(__name__)
 
-model = load_model('LogisticRegressionHear')
+model = = pickle.load(open('LogisticRegressionHeart.sav', 'rb'))
 cols = ['age', 'sex','cp',	'trestbps',	'chol',	'fbs',	'restecg',	'thalach',	'exang',	'oldpeak',	'slope',	'ca',	'thal']
 
 @app.route('/')
