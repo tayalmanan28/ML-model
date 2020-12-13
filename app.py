@@ -6,8 +6,8 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = load_model('deployment_28042020')
-cols = ['age', 'sex', 'bmi', 'children', 'smoker', 'region']
+model = load_model('LogisticRegressionHear')
+cols = ['age', 'sex','cp',	'trestbps',	'chol',	'fbs',	'restecg',	'thalach',	'exang',	'oldpeak',	'slope',	'ca',	'thal']
 
 @app.route('/')
 def home():
@@ -20,7 +20,7 @@ def predict():
     data_unseen = pd.DataFrame([final], columns = cols)
     prediction = predict_model(model, data=data_unseen, round = 0)
     prediction = int(prediction.Label[0])
-    return render_template('home.html',pred='Expected Bill will be {}'.format(prediction))
+    return render_template('home.html',pred='The report of your heart is  {}'.format(prediction))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
