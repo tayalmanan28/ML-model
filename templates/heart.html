@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Heart disease</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Heart disease</h1>
+     <a class="nav-link" href="heart.html">Heart Disease</a>
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="age" placeholder="Age" required="required" /><br>
+    	<input type="text" name="sex" placeholder="Sex (1 for Male, 0 for Female)" required="required" /><br>
+        <input type="text" name="cp" placeholder="CP" required="required" /><br>
+        <input type="text" name="trestbps" placeholder="Trest BPS" required="required" /><br>
+        <input type="text" name="chol" placeholder="Cholestrol" required="required" /><br>
+        <input type="text" name="fbs" placeholder="FBS" required="required" /><br>
+	<input type="text" name="restecg" placeholder="Rest ECG" required="required" /><br>
+        <input type="text" name="thalach" placeholder="Thalach" required="required" /><br>
+        <input type="text" name="exang" placeholder="Exang" required="required" /><br>
+        <input type="text" name="oldpeak" placeholder="Old peak" required="required" /><br>
+        <input type="text" name="slope" placeholder="Slope" required="required" /><br>
+	<input type="text" name="ca" placeholder="CA" required="required" /><br>
+        <input type="text" name="thal" placeholder="Thal" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{pred}}
+
+</body>
+</html>
