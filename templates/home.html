@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Predict Heart disease</title>
+  <title>Predict Diseases</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -13,10 +13,13 @@
 
 <body>
  <div class="login">
-	<h1>Predict Heart disease</h1>
-     <a class="nav-link" href="heart.html">Heart Disease</a>
+	<h1>Predict Following diseases</h1>
+     <a class="nav-link" href="https://diseaseheart.herokuapp.com/">Heart Disease</a>
+     <a class="nav-link" href="https://predictdiabetesiitb.herokuapp.com/">Diabetes</a>
+	 <a class="nav-link" href="https://cancerbreastdisease.herokuapp.com/">Breast Cancer</a>
+	 <a class="nav-link" href="https://commondiseases.herokuapp.com/">Common Disease</a>
      <!-- Form to enter new data for predictions  -->
-    <form action="{{ url_for('predict')}}"method="POST">
+    <!--<form action="{{ url_for('predict')}}"method="POST">
       <input type="text" name="age" placeholder="Age" required="required" /><br>
     	<input type="text" name="sex" placeholder="Sex (1 for Male, 0 for Female)" required="required" /><br>
         <input type="text" name="cp" placeholder="CP" required="required" /><br>
@@ -32,7 +35,7 @@
         <input type="text" name="thal" placeholder="Thal" required="required" /><br>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
+    </form>-->
 
    <br>
    <br>
